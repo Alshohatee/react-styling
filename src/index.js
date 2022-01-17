@@ -13,6 +13,9 @@ let stylyingobj = {
   color: ""
 };
 
+// to test it
+// const date new Date(2019, 1, 1, 14);
+
 let heading = "";
 
 const d = new Date();
