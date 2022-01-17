@@ -8,12 +8,31 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-
+let stylyingobj = {
+  color: ""
+};
 let heading = "";
+const d = new Date();
+let hour = d.getHours();
+
+if (hour >= 0 || hour < 12) {
+  heading = "Good morning";
+  stylyingobj.color = "red";
+}
+
+if (hour >= 12 || hour <= 12) {
+  heading = "Good Afternoon";
+  stylyingobj.color = "green";
+}
+
+if (hour >= 6 || hour < 24) {
+  heading = "Good evening";
+  stylyingobj.color = "blue";
+}
 
 ReactDOM.render(
   <div>
-    <h1>Hello</h1>{" "}
+    <h1 style={stylyingobj}>{heading}</h1>
   </div>,
   document.getElementById("root")
 );
